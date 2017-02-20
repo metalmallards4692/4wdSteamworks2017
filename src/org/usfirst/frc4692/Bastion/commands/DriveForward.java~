@@ -13,7 +13,7 @@ public class driveforward extends Command {
     	drive.start();
     }
     protected void execute() {
-    	Robot.drivetrain.driveStraight(3.0);
+    	Robot.drivetrain.driveStraight(1.0);
     }
     protected boolean isFinished() {
         return (drive.get()>2);

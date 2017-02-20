@@ -13,7 +13,7 @@ public class Robot extends IterativeRobot {
     Command Autonomous;
     private CameraServer camera;
     public static OI oi;
-    public static drivetrain drivetrain;
+    public static Drivetrain drivetrain;
     public static Winch winch;
     public static Ballstuff ballstuff;
     public static Gear gear;
@@ -22,7 +22,7 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
     RobotMap.init();
     	shift = new shift();
-        drivetrain = new drivetrain();
+        drivetrain = new Drivetrain();
         winch = new Winch();
         ballstuff = new Ballstuff();
         gear = new Gear();

@@ -7,7 +7,7 @@ public class Autonomous extends CommandGroup {
     public Autonomous() {
     	
     	addSequential(new driveforward());
-    	addSequential(new SlideExtend());
+    	addSequential(new Spitgear());
         // e.g. addSequential(new Command1());
         //      addSequential(new Command2());
         // these will run in order.

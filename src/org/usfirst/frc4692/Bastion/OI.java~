@@ -12,13 +12,13 @@ public class OI {
     public Joystick joystick2;
     public Joystick gamepad;
     public JoystickButton lift;
-    public JoystickButton belt;
     public JoystickButton hoodflipup;
     public JoystickButton hoodflipdown;
     public JoystickButton gearEject;
-    public JoystickButton beltstop;
-    public JoystickButton  shiftdown;
-    public JoystickButton  shiftup;
+    public JoystickButton shiftdown;
+    public JoystickButton shiftup;
+    public JoystickButton gearslidein;
+    public JoystickButton gearslideout;
     
     public OI() {
         
@@ -37,6 +37,10 @@ public class OI {
         shiftup.whenPressed(new upshift());
         shiftdown = new JoystickButton(joystick2, 1);
         shiftdown.whenPressed(new downshift());
+        gearslidein = new JoystickButton(gamepad, 5);
+        gearslidein.whenPressed(new SlideRetract());
+        gearslideout = new JoystickButton(gamepad, 6);
+        gearslideout.whenPressed(new SlideExtend());
         
         SmartDashboard.putData("Autonomous", new Autonomous());
         SmartDashboard.putData("DriveWithJoysticks", new DriveWithJoysticks());
